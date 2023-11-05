@@ -263,93 +263,227 @@
   }
 
 
-  // #newProducts {
-  //   .section-title-wrap {
-  //     align-items: center;
-  //     text-align: center;
-  //   }
-  //  #cards {
-  //     .row {
-  //       .card {
-  //         display: block;
+// #newProducts {
+//   .section-title-wrap {
+//     align-items: center;
+//       text-align: center;
+//     }
+//    #cards {
+//       .row {
+//         .card {
+//           display: block;
   
-  //         border: none;
+//           border: none;
   
-  //         .product-item {
-  //           .product-img .secondary-img {
-  //             display: none;
-  //           }
+//           .product-item {
+//             .product-img .secondary-img {
+//               display: none;
+//             }
   
-  //           .product-img:hover .primary-img {
-  //             display: none;
-  //           }
+//             .product-img:hover .primary-img {
+//               display: none;
+//             }
   
-  //           .product-img:hover .secondary-img {
-  //             display: block;
-  //           }
+//             .product-img:hover .secondary-img {
+//               display: block;
+//             }
   
-  //           .product-add-action {
-  //             opacity: 0;
-  //             visibility: hidden;
+//             .product-add-action {
+//               opacity: 0;
+//               visibility: hidden;
   
-  //             a {
-  //               padding: 10px;
-  //               background-color: whitesmoke;
-  //             }
-  //           }
+//               a {
+//                 padding: 10px;
+//                 background-color: whitesmoke;
+//               }
+//             }
   
-  //           .product-img:hover .product-add-action {
-  //             opacity: 1;
-  //             visibility: visible;
-  //             transform: translateX(5px);
-  //             transition: transform 0.3s ease-in-out;
-  //             cursor: pointer;
+//             .product-img:hover .product-add-action {
+//               opacity: 1;
+//               visibility: visible;
+//               transform: translateX(5px);
+//               transition: transform 0.3s ease-in-out;
+//               cursor: pointer;
   
-  //             a {
-  //               &:hover {
-  //                 background-color: #abd373;
+//               a {
+//                 &:hover {
+//                   background-color: #abd373;
   
-  //                 i {
-  //                   color: white;
-  //                 }
-  //               }
-  //             }
-  //           }
+//                   i {
+//                     color: white;
+//                   }
+//                 }
+//               }
+//             }
   
-  //           .product-content {
-  //             a {
-  //               margin-top: 10px;
-  //               margin-bottom: 5px;
-  //               color: #303030;
-  //               font-size: 18px;
-  //               display: block;
-  //               cursor: pointer;
+//             .product-content {
+//               a {
+//                 margin-top: 10px;
+//                 margin-bottom: 5px;
+//                 color: #303030;
+//                 font-size: 18px;
+//                 display: block;
+//                 cursor: pointer;
   
-  //               &:hover {
-  //                 color: #abd373;
-  //               }
-  //             }
+//                 &:hover {
+//                   color: #abd373;
+//                 }
+//               }
   
-  //             .price-box {
-  //               color: #abd373;
-  //               cursor: pointer;
-  //             }
+//               .price-box {
+//                 color: #abd373;
+//                 cursor: pointer;
+//               }
   
-  //             .rating-box {
-  //               ul {
-  //                 li {
-  //                   i {
-  //                     color: #ffe24d;
-  //                     cursor: pointer;
-  //                   }
-  //                 }
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
+//               .rating-box {
+//                 ul {
+//                   li {
+//                     i {
+//                       color: #ffe24d;
+//                       cursor: pointer;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
   
   
-  //   }
-  // }
+//     }
+// }
+
+#client{
+  padding: 0 30px;
+  .bg-client{
+    background-image: url("https://htmldemo.net/pronia/pronia/assets/images/testimonial/bg/1-1-1820x443.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+    min-height: 440px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    .section-title-wrap{
+      text-align: center;
+      .section-title{
+        text-transform: uppercase;
+        position: relative;
+        color: #393939;
+        font-size: 36px;
+        line-height: 27px;
+        padding-left: 90px;
+        padding-right: 90px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+      .sectionDesc{
+        text-align: center;
+        line-height: 31px;
+        color: black;
+        margin-bottom: 55px;
+        max-width: 580px;
+      }
+    }
+    
+  }
+  .testimonial{
+    .row{
+      .cardTesti{
+        width: 360px;
+        margin-right: 30px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 40px;
+        position: relative;
+        overflow: hidden;
+        z-index: 12 !important;
+        &::before{
+          content: url("https://htmldemo.net/pronia/pronia/assets/images/testimonial/icon/quotation.png");
+            border-bottom-left-radius: 100%;
+            background-color: #abd373;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 125px;
+            height: 110px;
+            line-height: 110px;
+            text-align: center;
+            padding-left: 15px;
+            transition: all 0.3s
+        }
+        &:hover::before{
+          background-color: #525252;
+        }
+        .userInfo{
+          .user-content{
+            .userName{
+              text-transform: uppercase;
+              color: #434343;
+              font-size: 16px;
+              font-weight: 400;
+              padding-top: 25px;
+            }
+            .clientInfo{
+              color: #434343;
+            }
+
+          }
+          .userComment{
+            color: #434343;
+            line-height: 32px;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+
+#brand{
+  padding-top: 20px;
+  padding-bottom: 60px;
+  .brand-bgg{
+    background-image: url("https://htmldemo.net/pronia/pronia/assets/images/brand/bg/1-1170x300.jpg");
+    background-position: center;
+    border-radius: 10px;
+    height: 30vh;
+    width: 100%;
+    .logo{
+      height: 30vh;
+    }
+  }
+}
+
+
+#latestBlog{
+  .row{
+    gap: 30px;
+    .blogCard{
+      background-color: #f6f7fb;
+      padding: 35px 30px 40px 30px;
+      border-radius: 10px;
+      max-width: 400px;
+      .blogContent{
+        .By{
+          color: #abd373;
+        }
+        h2{
+          a{
+            transition: all 0.5 ease ;
+            &:hover{
+            color: #abd373;
+            transition: all 0.5 ease ;
+
+          }
+          }
+        }
+      }
+    }
+  }
+}
+
+  

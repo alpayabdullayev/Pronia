@@ -1,0 +1,46 @@
+footer{
+    background-image: url("https://htmldemo.net/pronia/pronia/assets/images/footer/bg/1-1920x465.jpg");
+    min-height: 50vh;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    .row{
+        .footerItem{
+            padding-top: 50px;
+            .footerLogo{
+                padding-bottom: 35px;
+            }
+            .footerDesc{
+                margin-bottom: 35px;
+                line-height: 27px;
+                color: #000000;
+                font-size: 16px;
+            }
+            .socialIcon{
+                ul{
+                    li{
+                        a{
+                            border: 1px solid black;
+                            border-color: #000000;
+                            color: #000000;
+                            border-radius: 0;
+                            padding: 10px;
+                            transition: all 0.5s ease;
+
+                            &:hover{
+                                background-color: #abd373;
+                                transition: all 0.5s ease;
+                            }
+                            i{
+                                font-size: 14px;
+                                transition: all 0.5s ease;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

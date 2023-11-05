@@ -1,7 +1,9 @@
 @import "./base/reset";
 @import "./base/typography";
+@import "./base/helpers";
 @import "./components/button";
 @import "./components/hoverEffects";
 @import "./layout/nav";
 @import "./components/offCanvas";
-@import "./page/home"
+@import "./page/home";
+@import "./layout/footer"

@@ -73,7 +73,7 @@ function createCards(
     };
     basketArr.push(product);
     setLocalStorage("basket", basketArr);
-    console.log("sebetde dusdumuuu??", productName);
+    console.log("sebetde dus", productName);
     generateBasket();
   };
   row.appendChild(col);
@@ -138,6 +138,7 @@ function increaseCount(productId) {
     product.count++;
     setLocalStorage("basket", basketArr);
     generateBasket();
+    updateTotalCostDisplay();
   }
 }
 
@@ -147,12 +148,14 @@ function decreaseCount(productId) {
     product.count--;
     setLocalStorage("basket", basketArr);
     generateBasket();
+    updateTotalCostDisplay();
   }
 }
 function removeBasket(productId) {
   basketArr = basketArr.filter((product) => product.Productid !== productId);
   setLocalStorage("basket", basketArr);
   generateBasket();
+  updateTotalCostDisplay();
 }
 
 initializeBasket();
@@ -160,6 +163,7 @@ initializeBasket();
 function initializeBasket() {
   basketArr = getLocalStorage("basket") || [];
   generateBasket();
+  updateTotalCostDisplay();
 }
 
 function calculateTotalCost() {
@@ -168,12 +172,37 @@ function calculateTotalCost() {
     }, 0);
   
     return totalCost;
-   
+  }
+  function updateTotalCostDisplay() {
+    const totalCost = calculateTotalCost();
+    const discountedTotalCost = calculateDiscountedTotalCost();
+    const totalCount = document.querySelector("#totalCost");
+    const discountedTotalCount = document.querySelector("#discountedTotalCost");
+    
+    if (totalCount) {
+      totalCount.textContent = `CEMI ${totalCost.toFixed(2)} AZN`;
+    }
+    
+    if (discountedTotalCount) {
+      discountedTotalCount.textContent = `Endirimli CEMI: ${discountedTotalCost.toFixed(2)} AZN`;
+    }
+  }
+  function calculateDiscountedTotalCost() {
+    const totalCost = basketArr.reduce((acc, product) => {
+      let discountedPrice = product.productPrice;
+      if (product.count >= 5) {
+        discountedPrice = product.productPrice * 0.8; 
+      }
+      return acc + discountedPrice * product.count;
+    }, 0);
+  
+    return totalCost;
   }
   
-  const totalCost = calculateTotalCost();
-  let offcanvasEnd = document.getElementById("offcanvasEnd")
-  let totalCount = document.createElement("h5")
-  totalCount.textContent = totalCost
-  offcanvasEnd.appendChild(totalCount)
+  
+//   const totalCost = calculateTotalCost();
+//   let offcanvasEnd = document.getElementById("offcanvasEnd")
+//   let totalCount = document.createElement("h5")
+//   totalCount.textContent = totalCost
+//   offcanvasEnd.appendChild(totalCount)
 getProducts();

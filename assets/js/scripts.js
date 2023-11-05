@@ -49,21 +49,21 @@ let currentIndex = 0;
 
 function showImage(index) {
   sliderImg.src = imageUrls[index];
-  AOS.refresh();
+  // AOS.refresh();
 }
 
 prevBtn.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
   showImage(currentIndex);
 
-  AOS.refresh();
+  // AOS.refresh();
 });
 
 nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % imageUrls.length;
   showImage(currentIndex);
 
-  AOS.refresh();
+  // AOS.refresh();
 });
 
 showImage(currentIndex);
