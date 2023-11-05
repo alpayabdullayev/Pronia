@@ -514,6 +514,230 @@ nav .navbarPronia .icons i:hover {
   transform: translateX(5px);
 }
 
+#sideBar {
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  width: 380px;
+  height: 100%;
+  transition: all 0.5s ease;
+  z-index: 111111111;
+}
+#sideBar .sideBar-content {
+  position: relative;
+  padding: 110px 20px;
+}
+#sideBar .sideBar-content .sideBarCloseBtn {
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 70px;
+  right: 70px;
+}
+#sideBar .sideBar-content .sideBarPhone .spanPhone {
+  font-size: 18px;
+  color: #fff;
+  padding-left: 10px;
+  transition: all 0.5s ease-in;
+}
+#sideBar .sideBar-content .sideBarPhone .spanPhone:hover {
+  color: #abd373;
+  transition: all 0.5s ease-in;
+}
+#sideBar .sideBar-content .sideBarPhone .span {
+  padding: 15px;
+  background-color: #abd373;
+  border-radius: 30%;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#sideBar .sideBar-content .sideBarInfo {
+  height: 70px;
+  width: 100%;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap {
+  height: 50px;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown {
+  padding-right: 45px;
+  padding-top: 20px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .dropdownBtn {
+  outline: none;
+  border: none;
+  background: inherit;
+  color: #fff;
+  font-size: 13px;
+  margin-right: 20px;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .USD__UL {
+  padding: 15px;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .USD__UL li {
+  position: relative;
+  transition: all 0.5s ease;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .USD__UL li p {
+  position: relative;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .USD__UL li p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #abd373;
+  transform: scaleX(0);
+  transition: transform 0.9s ease;
+  transform-origin: right;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .USD__UL li p:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .english__ul li {
+  position: relative;
+  transition: all 0.5s ease;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .english__ul li p {
+  position: relative;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .english__ul li p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #abd373;
+  transform: scaleX(0);
+  transition: transform 0.9s ease;
+  transform-origin: right;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .english__ul li p:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown ul {
+  background-color: #fff;
+  padding: 15px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown ul.show {
+  transition: all 0.5s ease-in;
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown ul a {
+  color: #000;
+  font-size: 13px;
+  padding: 10px 20px;
+  font-size: 13px;
+}
+#sideBar .sideBar-content .sideBarInfo .dropdown-wrap .dropdown .english__ul a {
+  color: #000;
+  font-size: 13px;
+}
+#sideBar .sideBar-content .sideBarMobNav nav {
+  padding-top: 90px;
+}
+#sideBar .sideBar-content .sideBarMobNav nav ul {
+  color: #fff;
+}
+#sideBar .sideBar-content .sideBarMobNav nav ul li {
+  padding-top: 20px;
+}
+#sideBar .sideBar-content .sideBarMobNav nav ul li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#sideBar .sideBar-content .sideBarMobNav nav ul li ul {
+  background-color: rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  transform: scaleY(0);
+  transition: all 0.3s;
+}
+#sideBar .sideBar-content .sideBarMobNav nav ul li ul li {
+  padding: 10px;
+}
+#sideBar .sideBar-content .sideBarMobNav nav ul li ul.active {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 20px 0 10px;
+  transform: scaleY(1);
+  transition: all 0.3s;
+  transform-origin: top center;
+  overflow: hidden;
+  height: 150px;
+}
+
+#offCanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  transition: transform 0.5s ease;
+  z-index: 111111111;
+  transform: translateX(100%);
+  overflow-y: auto;
+}
+#offCanvas .offcanvas-content {
+  position: relative;
+  padding: 55px 20px;
+}
+#offCanvas.open {
+  transform: translatex(0);
+}
+#offCanvas #offcanvasContentMain .miniCard {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#offCanvas #offcanvasContentMain .miniCard .card-img {
+  width: 100px;
+}
+#offCanvas #offcanvasContentMain .miniCard .cardInfo h5 {
+  font-size: 14px;
+}
+#offCanvas #offcanvasContentMain .miniCard .cardCount button {
+  background-color: #505050;
+  border: 1px solid #505050;
+  color: #ffffff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+#offCanvas #offcanvasContentMain .miniCard .delete button {
+  border: none;
+  background: none;
+  margin-bottom: 38px;
+}
+
 #slider {
   background-image: url(https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg);
   position: relative;
@@ -673,21 +897,18 @@ nav .navbarPronia .icons i:hover {
   color: #ffe24d;
   cursor: pointer;
 }
-#ourProducts #cards .card[data-category=bestseller] {
-  display: none;
-}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #cards .row .card {
-    padding-left: 80px;
+    padding-left: 85px;
   }
 }
 #bannerSect .banner-item {
   position: relative;
+  width: 100%;
 }
 #bannerSect .banner-item .banner-content {
   position: absolute;
-  width: calc(100% - 70px);
   top: 50px;
   left: 70px;
 }

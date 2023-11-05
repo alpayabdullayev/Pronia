@@ -214,19 +214,17 @@
       }
     }
 
-    .card[data-category="bestseller"] {
-      display: none;
-    }
+
   }
 }
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #cards {
     .row {
       .card {
-        padding-left: 80px;
+        padding-left: 85px;
       }
     }
   }
@@ -238,9 +236,9 @@
 
     .banner-item{
       position: relative;
+      width: 100%;
       .banner-content{
         position: absolute;
-        width: calc(100% - 70px);
         top: 50px;
         left: 70px;
         span{
@@ -263,3 +261,95 @@
       }
     }
   }
+
+
+  // #newProducts {
+  //   .section-title-wrap {
+  //     align-items: center;
+  //     text-align: center;
+  //   }
+  //  #cards {
+  //     .row {
+  //       .card {
+  //         display: block;
+  
+  //         border: none;
+  
+  //         .product-item {
+  //           .product-img .secondary-img {
+  //             display: none;
+  //           }
+  
+  //           .product-img:hover .primary-img {
+  //             display: none;
+  //           }
+  
+  //           .product-img:hover .secondary-img {
+  //             display: block;
+  //           }
+  
+  //           .product-add-action {
+  //             opacity: 0;
+  //             visibility: hidden;
+  
+  //             a {
+  //               padding: 10px;
+  //               background-color: whitesmoke;
+  //             }
+  //           }
+  
+  //           .product-img:hover .product-add-action {
+  //             opacity: 1;
+  //             visibility: visible;
+  //             transform: translateX(5px);
+  //             transition: transform 0.3s ease-in-out;
+  //             cursor: pointer;
+  
+  //             a {
+  //               &:hover {
+  //                 background-color: #abd373;
+  
+  //                 i {
+  //                   color: white;
+  //                 }
+  //               }
+  //             }
+  //           }
+  
+  //           .product-content {
+  //             a {
+  //               margin-top: 10px;
+  //               margin-bottom: 5px;
+  //               color: #303030;
+  //               font-size: 18px;
+  //               display: block;
+  //               cursor: pointer;
+  
+  //               &:hover {
+  //                 color: #abd373;
+  //               }
+  //             }
+  
+  //             .price-box {
+  //               color: #abd373;
+  //               cursor: pointer;
+  //             }
+  
+  //             .rating-box {
+  //               ul {
+  //                 li {
+  //                   i {
+  //                     color: #ffe24d;
+  //                     cursor: pointer;
+  //                   }
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  
+  
+  //   }
+  // }

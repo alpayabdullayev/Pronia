@@ -1,4 +1,4 @@
-let row = document.getElementById("row");
+let row = document.getElementById("row2");
 let basketArr = getLocalStorage("basket") || [];
 
 function setLocalStorage(key, data) {
@@ -73,7 +73,7 @@ function createCards(
     };
     basketArr.push(product);
     setLocalStorage("basket", basketArr);
-    console.log("sebetde dusdumuuu??", productName);
+    console.log("sebetdeki", productName);
     generateBasket();
   };
   row.appendChild(col);
@@ -81,8 +81,9 @@ function createCards(
 
 async function getProducts() {
   try {
-    const res = await axios.get("http://localhost:3000/products");
-    res.data.forEach((element) => {
+    const response = await fetch("http://localhost:4000/newProducts");
+    const data = await response.json();
+    data.forEach((element) => {
       createCards(
         element.id,
         element.dataCategory,
@@ -97,83 +98,6 @@ async function getProducts() {
   }
 }
 
-function generateBasket() {
-  const offcanvasContentMain = document.getElementById("offcanvasContentMain");
-  offcanvasContentMain.innerHTML = "";
 
-  basketArr.forEach((product) => {
-    const productDiv = document.createElement("div");
-    productDiv.innerHTML = `
-      <div class="miniCard d-flex">
-          <div class="card-img">
-              <img src="${product.img_url}" alt="">
-          </div>
-          <div class="cardInfo d-flex flex-column">
-              <div class="cardName"><h5>${product.productName}</h5></div>
-              <div class="cardCount">
-              <span>${product.productPrice} x</span>
-              
-              <button onclick="decreaseCount(${product.Productid})">-</button><span>${product.count}</span> <button onclick="increaseCount(${product.Productid})">+</button>
-              </div>
-              
-          </div>
-          <div class="delete">
-              <button class="deleteBtn" data-id="${product.Productid}">X</button>
-          </div>
-      </div>
-      `;
 
-    offcanvasContentMain.appendChild(productDiv);
-    const deleteButton = productDiv.querySelector(".deleteBtn");
-    deleteButton.addEventListener("click", () => {
-      const productId = parseInt(deleteButton.getAttribute("data-id"));
-      removeBasket(productId);
-    });
-  });
-}
-
-function increaseCount(productId) {
-  const product = basketArr.find((p) => p.Productid === productId);
-  if (product) {
-    product.count++;
-    setLocalStorage("basket", basketArr);
-    generateBasket();
-  }
-}
-
-function decreaseCount(productId) {
-  const product = basketArr.find((p) => p.Productid === productId);
-  if (product && product.count > 1) {
-    product.count--;
-    setLocalStorage("basket", basketArr);
-    generateBasket();
-  }
-}
-function removeBasket(productId) {
-  basketArr = basketArr.filter((product) => product.Productid !== productId);
-  setLocalStorage("basket", basketArr);
-  generateBasket();
-}
-
-initializeBasket();
-
-function initializeBasket() {
-  basketArr = getLocalStorage("basket") || [];
-  generateBasket();
-}
-
-function calculateTotalCost() {
-    const totalCost = basketArr.reduce((acc, product) => {
-      return acc + product.productPrice * product.count;
-    }, 0);
-  
-    return totalCost;
-   
-  }
-  
-  const totalCost = calculateTotalCost();
-  let offcanvasEnd = document.getElementById("offcanvasEnd")
-  let totalCount = document.createElement("h5")
-  totalCount.textContent = totalCost
-  offcanvasEnd.appendChild(totalCount)
 getProducts();
