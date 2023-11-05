@@ -489,15 +489,45 @@ nav{
     }
 }
 
-
-
-
-
-
-
-
-@media only screen and (max-width: 600px) {
+// .sideBar {
+//     color: #fff;
+//     width: 350px;
+//     height: 100%;
+//     background: #333333;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     .sideBarTop {
+//         padding: 10px 20px;
+//       }
+//       .close-btn {
+//         display: flex;
+//         justify-content: flex-end;
+//         padding: 20px 0;
+//       }
     
-}
-
+//       .sideBar-content {
+//         padding: 200px 0px;
+//       }
+    
+//       .phone {
+//         background-color: $primary-color;
+//         padding: 15px;
+//         display: inline-flex;
+//         justify-content: center;
+//         align-items: center;
+//         color: #fff;
+//         border-radius: 10px;
+//         margin-right: 5px;
+//       }
+//       .contact-number {
+//         color: #fff;
+//         padding-left: 7px;
+//         transition: all 0.3s;
+//         &:hover {
+//           transition: all 0.3s;
+//           color: $primary-color;
+//         }
+//       }
+// }  
 
