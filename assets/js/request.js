@@ -94,7 +94,9 @@ function createCards(
 async function getProducts() {
   try {
     const res = await axios.get("http://localhost:3000/products");
-    res.data.forEach((element) => {
+    const allProducts = res.data;
+    // const displayedProducts = allProducts.filter((product) => product.display === true);
+    allProducts.forEach((element) => {
       createCards(
         element.id,
         element.dataCategory,
@@ -104,6 +106,17 @@ async function getProducts() {
         element.price
       );
     });
+    // const row2 = document.getElementById("row2"); 
+    // displayedProducts.forEach((element) => {
+    //   createCards(
+    //     element.id,
+    //     element.dataCategory,
+    //     element.image,
+    //     element.image2,
+    //     element.name,
+    //     element.price
+    //   );
+    // });
   } catch (error) {
     console.error(error);
   }
