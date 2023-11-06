@@ -3,6 +3,8 @@ let basketArr = getLocalStorage("basket") || [];
 let bascetCountQuantity = document.querySelector(".count");
 let bascetCountQuantityFixed = document.querySelector(".countfix");
 
+let totalCost = 0;
+
 function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
@@ -82,6 +84,9 @@ function createCards(
     let localLength = getLocalStorage("basket").length;
     bascetCountQuantity.textContent = localLength;
     bascetCountQuantityFixed.textContent = localLength;
+
+        totalCost += productPrice; 
+        updateTotalCostDisplay();
   };
   row.appendChild(col);
 }

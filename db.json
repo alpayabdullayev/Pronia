@@ -1,0 +1,85 @@
+{
+  "products": [
+      {
+          "id": 1,
+          "name": "American Marigold",
+          "price": "23.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-2-270x300.jpg",
+          "dataCategory" : "bestseller",
+          "display": true
+          
+      },
+      {
+          "id": 2,
+          "name": "Black Eyed Susan",
+          "price": "23.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-2-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg",
+          "dataCategory" : "bestseller",
+          "display": true
+
+      },
+      {
+          "id": 3,
+          "name": "Bleeding Heart",
+          "price": "31.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-4-270x300.jpg",
+          "dataCategory" : "featured",
+          "display": true
+
+      },
+      {
+          "id": 4,
+          "name": "Bloody Cranesbill",
+          "price": "31.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-4-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-5-270x300.jpg",
+          "dataCategory" : "latest",
+          "display": true
+
+      },
+      {
+          "id": 5,
+          "name": "Butterfly Weed",
+          "price": "50.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-4-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-5-270x300.jpg",
+          "dataCategory" : "featured",
+          "display": false
+
+      },
+      {
+          "id": 6,
+          "name": "Common Yarrow",
+          "price": "60.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-7-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-6-270x300.jpg",
+          "dataCategory" : "latest",
+          "display": true
+
+      },
+      {
+          "id": 7,
+          "name": "Yarrow Common ",
+          "price": "92.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-6-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-7-270x300.jpg",
+          "dataCategory" : "latest",
+          "display": false
+
+      },
+      {
+          "id": 8,
+          "name": "Oc Ogli ",
+          "price": "92.45",
+          "image": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-5-270x300.jpg",
+          "image2": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg",
+          "dataCategory" : "bestseller",
+          "display": true
+
+      }
+  ]
+}
+
