@@ -285,6 +285,13 @@ nav .navbarPronia .phone .span {
   justify-content: center;
   align-items: center;
 }
+nav .navbarPronia .icons .count {
+  background-color: #abd373;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
 nav .navbarPronia .icons i {
   padding-left: 15px;
   color: #525252;
@@ -978,6 +985,9 @@ nav .navbarPronia .icons i:hover {
   color: black;
   margin-bottom: 55px;
   max-width: 580px;
+}
+#client .testimonial .row .swiper {
+  padding: 0;
 }
 #client .testimonial .row .cardTesti {
   width: 360px;

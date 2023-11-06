@@ -165,41 +165,6 @@ searchIcon.addEventListener("click", (e) => {
 
 
 
-  // const mobileNavLinks = document.querySelectorAll('.mobile-navlink');
-  // const subMenus = document.querySelectorAll('.sideBarMenu');
-  
-  // mobileNavLinks.forEach((link, index) => {
-  //   link.addEventListener('click', () => {
-  //     // Tıklanan linkin alt menüsünü aç/kapat
-  //     subMenus[index].classList.toggle('active');
-  
-  //     // Diğer alt menüleri kapat
-  //     subMenus.forEach((subMenu, i) => {
-  //       if (i !== index) {
-  //         subMenu.classList.remove('active');
-  //       }
-  //     });
-  //   });
-  // });
-
-//   const mobileNavLinks = document.querySelectorAll('.mobile-navlink');
-// const subMenus = document.querySelectorAll('.sideBarMenu');
-
-// mobileNavLinks.forEach((link, index) => {
-//   link.addEventListener('click', (e) => {
-//     e.preventDefault(); // Bağlantıyı takip etmeyi engelle
-
-//     // Tıklanan linkin alt menüsünü aç/kapat
-//     subMenus[index].classList.toggle('active');
-
-//     // Diğer alt menüleri kapat
-//     subMenus.forEach((subMenu, i) => {
-//       if (i !== index) {
-//         subMenu.classList.remove('active');
-//       }
-//     });
-//   });
-// });
 
 
 

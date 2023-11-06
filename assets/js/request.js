@@ -1,5 +1,7 @@
 let row = document.getElementById("row");
 let basketArr = getLocalStorage("basket") || [];
+let bascetCountQuantity = document.querySelector(".count");
+let bascetCountQuantityFixed = document.querySelector(".countfix");
 
 function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
@@ -72,9 +74,14 @@ function createCards(
       count: 1,
     };
     basketArr.push(product);
+
+   
     setLocalStorage("basket", basketArr);
-    console.log("sebetde dus", productName);
     generateBasket();
+
+    let localLength = getLocalStorage("basket").length;
+    bascetCountQuantity.textContent = localLength;
+    bascetCountQuantityFixed.textContent = localLength;
   };
   row.appendChild(col);
 }
@@ -96,6 +103,10 @@ async function getProducts() {
     console.error(error);
   }
 }
+
+let localLength = getLocalStorage("basket").length;
+bascetCountQuantity.textContent = localLength;
+bascetCountQuantityFixed.textContent = localLength;
 
 function generateBasket() {
   const offcanvasContentMain = document.getElementById("offcanvasContentMain");
@@ -156,6 +167,8 @@ function removeBasket(productId) {
   setLocalStorage("basket", basketArr);
   generateBasket();
   updateTotalCostDisplay();
+  bascetCountQuantity.textContent = basketArr.length;
+  bascetCountQuantityFixed.textContent = basketArr.length;
 }
 
 initializeBasket();
@@ -167,39 +180,40 @@ function initializeBasket() {
 }
 
 function calculateTotalCost() {
-    const totalCost = basketArr.reduce((acc, product) => {
-      return acc + product.productPrice * product.count;
-    }, 0);
-  
-    return totalCost;
+  const totalCost = basketArr.reduce((acc, product) => {
+    return acc + product.productPrice * product.count;
+  }, 0);
+
+  return totalCost;
+}
+function updateTotalCostDisplay() {
+  const totalCost = calculateTotalCost();
+  const discountedTotalCost = calculateDiscountedTotalCost();
+  const totalCount = document.querySelector("#totalCost");
+  const discountedTotalCount = document.querySelector("#discountedTotalCost");
+
+  if (totalCount) {
+    totalCount.textContent = `CEMI ${totalCost.toFixed(2)} AZN`;
   }
-  function updateTotalCostDisplay() {
-    const totalCost = calculateTotalCost();
-    const discountedTotalCost = calculateDiscountedTotalCost();
-    const totalCount = document.querySelector("#totalCost");
-    const discountedTotalCount = document.querySelector("#discountedTotalCost");
-    
-    if (totalCount) {
-      totalCount.textContent = `CEMI ${totalCost.toFixed(2)} AZN`;
+
+  if (discountedTotalCount) {
+    discountedTotalCount.textContent = `Endirimli CEMI: ${discountedTotalCost.toFixed(
+      2
+    )} AZN`;
+  }
+}
+function calculateDiscountedTotalCost() {
+  const totalCost = basketArr.reduce((acc, product) => {
+    let discountedPrice = product.productPrice;
+    if (product.count >= 5) {
+      discountedPrice = product.productPrice * 0.8;
     }
-    
-    if (discountedTotalCount) {
-      discountedTotalCount.textContent = `Endirimli CEMI: ${discountedTotalCost.toFixed(2)} AZN`;
-    }
-  }
-  function calculateDiscountedTotalCost() {
-    const totalCost = basketArr.reduce((acc, product) => {
-      let discountedPrice = product.productPrice;
-      if (product.count >= 5) {
-        discountedPrice = product.productPrice * 0.8; 
-      }
-      return acc + discountedPrice * product.count;
-    }, 0);
-  
-    return totalCost;
-  }
-  
-  
+    return acc + discountedPrice * product.count;
+  }, 0);
+
+  return totalCost;
+}
+
 //   const totalCost = calculateTotalCost();
 //   let offcanvasEnd = document.getElementById("offcanvasEnd")
 //   let totalCount = document.createElement("h5")

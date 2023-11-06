@@ -395,6 +395,9 @@
   }
   .testimonial{
     .row{
+      .swiper {
+        padding: 0;
+      }
       .cardTesti{
         width: 360px;
         margin-right: 30px;
