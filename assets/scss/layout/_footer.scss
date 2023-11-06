@@ -6,6 +6,8 @@ footer{
     background-position: center;
     background-size: cover;
     .row{
+        justify-content: center;
+        align-items: center;
         .footerItem{
             padding-top: 50px;
             .footerLogo{
@@ -41,6 +43,20 @@ footer{
                     }
                 }
             }
+            ul{
+                li{
+                    padding: 5px 5px;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                    &:hover{
+                        color: #abd373;
+                        transform: translateX(5px);
+                        transition: all 0.5s ease;
+
+                    }
+                }
+            }
         }
+        
     }
 }

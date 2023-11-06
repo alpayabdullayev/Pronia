@@ -105,6 +105,50 @@ body {
   pointer-events: none;
 }
 
+#offCanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  transition: transform 0.5s ease;
+  z-index: 111111111;
+  transform: translateX(100%);
+  overflow-y: auto;
+}
+#offCanvas .offcanvas-content {
+  position: relative;
+  padding: 55px 20px;
+}
+#offCanvas.open {
+  transform: translatex(0);
+}
+#offCanvas #offcanvasContentMain .miniCard {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#offCanvas #offcanvasContentMain .miniCard .card-img {
+  width: 100px;
+}
+#offCanvas #offcanvasContentMain .miniCard .cardInfo h5 {
+  font-size: 14px;
+}
+#offCanvas #offcanvasContentMain .miniCard .cardCount button {
+  background-color: #505050;
+  border: 1px solid #505050;
+  color: #ffffff;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+#offCanvas #offcanvasContentMain .miniCard .delete button {
+  border: none;
+  background: none;
+  margin-bottom: 38px;
+}
+
 header {
   background-color: #abd373;
   color: white;
@@ -716,50 +760,6 @@ nav .navbarPronia .icons i:hover {
   height: 150px;
 }
 
-#offCanvas {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  background-color: #fff;
-  transition: transform 0.5s ease;
-  z-index: 111111111;
-  transform: translateX(100%);
-  overflow-y: auto;
-}
-#offCanvas .offcanvas-content {
-  position: relative;
-  padding: 55px 20px;
-}
-#offCanvas.open {
-  transform: translatex(0);
-}
-#offCanvas #offcanvasContentMain .miniCard {
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-#offCanvas #offcanvasContentMain .miniCard .card-img {
-  width: 100px;
-}
-#offCanvas #offcanvasContentMain .miniCard .cardInfo h5 {
-  font-size: 14px;
-}
-#offCanvas #offcanvasContentMain .miniCard .cardCount button {
-  background-color: #505050;
-  border: 1px solid #505050;
-  color: #ffffff;
-  padding: 5px;
-  text-align: center;
-  border-radius: 5px;
-}
-#offCanvas #offcanvasContentMain .miniCard .delete button {
-  border: none;
-  background: none;
-  margin-bottom: 38px;
-}
-
 #slider {
   background-image: url(https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg);
   position: relative;
@@ -1065,6 +1065,10 @@ footer {
   background-position: center;
   background-size: cover;
 }
+footer .row {
+  justify-content: center;
+  align-items: center;
+}
 footer .row .footerItem {
   padding-top: 50px;
 }
@@ -1091,5 +1095,15 @@ footer .row .footerItem .socialIcon ul li a:hover {
 }
 footer .row .footerItem .socialIcon ul li a i {
   font-size: 14px;
+  transition: all 0.5s ease;
+}
+footer .row .footerItem ul li {
+  padding: 5px 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+footer .row .footerItem ul li:hover {
+  color: #abd373;
+  transform: translateX(5px);
   transition: all 0.5s ease;
 }/*# sourceMappingURL=main.css.map */

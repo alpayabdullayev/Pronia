@@ -1,9 +1,16 @@
+// Base start
 @import "./base/reset";
 @import "./base/typography";
 @import "./base/helpers";
+
+// Copmponents 
 @import "./components/button";
 @import "./components/hoverEffects";
-@import "./layout/nav";
 @import "./components/offCanvas";
+// Nav
+@import "./layout/nav";
+
+// Page
 @import "./page/home";
+// footer
 @import "./layout/footer"
